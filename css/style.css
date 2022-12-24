@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+body {
+    background-color: aqua;
+}
+
+.main {
+    margin: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.alerta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.alerta button {
+    border-style: none;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.alerta h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    position: absolute;
+    top: 280px;
+    left: 650px;
+    cursor: pointer;
+}
+
