@@ -70,10 +70,18 @@ for (let i = 0; i < amigos; i++) {
 
 //Enviar alerta al darle clic al botón
 
-let button = document.getElementById("btn");
-button.onclick = enviarAlerta;
+let button1 = document.getElementById("btn1");
+button1.onclick = enviarAlertaRoja;
 
-function enviarAlerta() {
+function enviarAlertaRoja() {
    alert("¡Alerta enviada!");
+}
+
+
+let button2 = document.getElementById("btn2");
+button2.onclick = enviarAlertaVerde;
+
+function enviarAlertaVerde() {
+   alert("Ya saben que estásn bien");
 }
 

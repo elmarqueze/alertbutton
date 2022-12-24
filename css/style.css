@@ -32,13 +32,32 @@ body {
     cursor: pointer;
 }
 
-.alerta h2{
+.alerta .btn-rojo{
     text-align: center;
     text-transform: uppercase;
     margin-top: 20px;
     position: absolute;
-    top: 280px;
-    left: 650px;
+    top: 260px;
+    left: 630px;
+    cursor: pointer;
+}
+
+.alerta #rojo{
+    width: 90%;
+}
+
+.alerta #verde{
+    width: 78%;
+}
+
+
+.alerta .btn-verde{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    position: absolute;
+    top: 570px;
+    left: 600px;
     cursor: pointer;
 }
 
