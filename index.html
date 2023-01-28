@@ -4,32 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Simulador Interactivo</title>
+    <title>AlertApp</title>
 </head>
+
 <body>
-
-<section class="main">
-
-    <div class="header">
-        <h1>Alerta de Accidente</h1>
-        <p>Avisa a tus contactos que estás en peligro con un solo botón</p>
-    </div>
-
-   
-    <div class="alerta">
-            <div>
-                <button class="btn1" id="btn1" type="submit"><img id="rojo" src="img/boton.png" alt="boton"><h2 class="btn-rojo">¡Ayuda!</h2></button>
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenido Motero</h1>
+            <h2>registra tu <span class="title-logo">alertApp</span></h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Usuario</label>
+                <input type="text" placeholder="Tu nombre" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="tu@email.com" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="contact">Contactos de emergencia</label>
+                <input type="text" placeholder="primero" class="contact" />
+                <input type="text" placeholder="segundo" class="contact" />
+                <input type="text" placeholder="tercero" class="contact" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="Contraseña" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirmar contraseña</label>
+                <input type="password" placeholder="Confirma" id="password2"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
 
-            <div>
-                <button class="btn2" id="btn2" type="submit"><img id="verde" src="img/botonV.png" alt="boton"><h2 class="btn-verde">Ya estoy bien</h2></button>
+            <button>Enviar</button>
+
+            <div class="legal-inicio">
+                <p >¿Ya eres usuario?</p>
+                <a id="summit" href="./pages/inicioSesion.html">Inicia Sesión</a>
             </div>
+
+        </form>
     </div>
-   
-</section>
 
-
+    <script src="js/crearCuenta.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>AlertApp</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenido Motero</h1>
+            <h2>inicia sesión en tu <span class="title-logo">alertApp</span></h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <label for="username">Usuario</label>
+                <input type="text" placeholder="Tu nombre" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="Contraseña" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button>Ingresar</button>
+
+            <a href="../index.html">Regístrate</a>
+        </form>
+    </div>
+
+    <script src="../js/inicioSesion.js"></script>
+</body>
+</html>
