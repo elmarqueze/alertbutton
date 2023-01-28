@@ -21,6 +21,12 @@ body {
 	margin: 0;
 }
 
+.main {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
 .container {
 	background-color: #fff;
 	border-radius: 5px;
@@ -131,6 +137,10 @@ body {
 	width: 100%;
     text-align: center;
     text-decoration: none;
+
+	transition: all .3s;
+
+	cursor: pointer;
 }
 
 .form button:hover {
@@ -153,6 +163,8 @@ body {
 	width: 100%;
     text-align: center;
     text-decoration: none;
+
+	transition: all .3s;
 }
 
 .form a:hover {
@@ -170,56 +182,86 @@ body {
 
 
 
-/*============== BUTTON SECTION ===============*/
 
-.main {
-    margin: 50px;
-}
+/*============== MAIN PAGE ===============*/
 
-.header {
+
+/* Boton para registrar contactos */
+.btn-registrar {
+	background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
     text-align: center;
+    text-decoration: none;
+
+	transition: all .3s;
+	cursor: pointer;
 }
 
-.alerta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+.btn-registrar:hover {
+	background: #2ecc71;
+    border: 2px solid #2ecc71;
 }
 
-.alerta button {
-    border-style: none;
-    background-color: aqua;
-    cursor: pointer;
+.table-container {
+	height: 318px;
+	margin-left: 20px;
+
 }
 
-.alerta .btn-rojo{
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 20px;
-    position: absolute;
-    top: 260px;
-    left: 630px;
-    cursor: pointer;
+.table-container table {
+	margin-top: 20px;
+
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	
+
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+	cursor: pointer;
+	
 }
 
-.alerta #rojo{
-    width: 90%;
+.form-text {
+	text-align: left;
+	font-weight: 500;
 }
 
-.alerta #verde{
-    width: 78%;
+.table-container td {
+	/* margin-top: 100px; */
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	transition: all .5s;
+	font-size: 1rempx;
+}
+
+.table-container td:hover {
+	background-color: rgb(190, 190, 190);
 }
 
 
-.alerta .btn-verde{
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 20px;
-    position: absolute;
-    top: 570px;
-    left: 600px;
-    cursor: pointer;
-}
+@media (max-width: 900px){
+	.main {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+	}
 
+	.form {
+		justify-content: center;
+	}
+
+	.container {
+		margin: 20px auto;
+	}
+}

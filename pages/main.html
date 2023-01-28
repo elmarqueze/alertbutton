@@ -9,69 +9,53 @@
     <title>AlertApp</title>
 </head>
 <body>
-    <form id="frmRegPersona">
-        <div class="input-container">
-            <label for="txtCedula">Cédula: </label>
-            <input type="text" id="txtCedula">
-        </div>
 
-        <div class="input-container">
-            <label for="txtNombre">Nombre: </label>
-            <input type="text" id="txtNombre">
-        </div>
-
-        <input type="button" value="Registrar" id="btnRegistrarPersona">
-    </form>
-
-
-
-    <table id="tblPersonas">
-        <thead>
-            <tr>
-                <th>Cédula</th>
-                <th>Nombre</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-
-
-        </tbody>
-    </table>
-
-    <script src="../js/logicaRegistro.js"></script>
-    <script src="../js/logicaInterfaz.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
 <section class="main">
-
-    <div class="header">
-        <h1>Alerta de Accidente</h1>
-        <p>Avisa a tus contactos que estás en peligro con un solo botón</p>
-    </div>
-
-   
-    <div class="alerta">
-            <div>
-                <button class="btn1" id="btn1" type="submit"><img id="rojo" src="../img/boton.png" alt="boton"><h2 class="btn-rojo">¡Ayuda!</h2></button>
+    <div class="container">
+        <form id="frmRegPersona" class="form">
+            <div class="input-container form-control form-text">
+                <label for="txtTeléfono">Teléfono </label>
+                <input type="text" id="txtTelefono" required class="telefono-register">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
 
-            <div>
-                <button class="btn2" id="btn2" type="submit"><img id="verde" src="../img/botonV.png" alt="boton"><h2 class="btn-verde">Ya estoy bien</h2></button>
+            <div class="input-container form-control form-text">
+                <label for="txtNombre">Nombre: </label>
+                <input type="text" id="txtNombre" required class="nombre-register">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
+    
+            <input class='btn-registrar' type="button" value="Registrar" id="btnRegistrarPersona">
+        </form>
     </div>
-   
-</section> -->
+
+    <div class="container table-container">
+        <table id="tblPersonas">
+            <thead>
+                <tr>
+                    <th>Teléfono</th>
+                    <th>Nombre</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>     
+    </div>
+
+</section>
+    
+
+<script src="../js/logicaRegistro.js"></script>
+<script src="../js/logicaInterfaz.js"></script>
+
+
 
 
 
