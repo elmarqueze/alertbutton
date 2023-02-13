@@ -34,11 +34,10 @@ access.addEventListener('click', ()=> {
 			title: `Bienvenido ${usuarioValue}`,
 			text: 'Acabas de iniciar sesión',
 			icon: "success",
-		}).then((result)=> {
-			if(result.isConfirmed) {
-				window.location.href = '/pages/main.html';
-			}
-		});
+		})
+		setTimeout(function() {
+			window.location.href = '/pages/main.html';
+		}, 2000);
 	}
 
 })

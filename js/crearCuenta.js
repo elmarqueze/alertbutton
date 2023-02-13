@@ -40,25 +40,46 @@ enviar.addEventListener('click', ()=> {
 			setErrorFor(password, 'Necesitas 6 caracteres mínimo.');
 		}
 	} else {
+		
 
 		swal({
 			title: `Bienvenido ${usuarioValue}`,
 			text: 'Ya eres parte de la comunidad motera',
 			icon: "success",
 			button: "Rutear",
-		}).then((result)=> {
-			if(result.isConfirmed) {
-				window.location.href = '/pages/main.html';
-			}
-		});
+		  	})
+
+		// checkInputs();
+		setTimeout(function() {
+			window.location.href = '/pages/main.html';
+		}, 2500);
+		// window.location.href = '/pages/main.html';
+	};
 
 		
-		setSuccessFor(usuario);
-	}
+
+		// swal({
+		// 	title: `Bienvenido ${usuarioValue}`,
+		// 	text: 'Ya eres parte de la comunidad motera',
+		// 	icon: "success",
+		// 	buttons: {
+		// 		cancel: false,
+		// 		confirm: "Aceptar"
+		// 	},
+		// }).then((result) => {
+		// 	if (result) {
+		// 		checkInputs();
+		// 		document.getElementById('enviar').click('/pages/main.html');
+		// 	}
+		// });
+
 	
 });
 
 
+function href() {
+
+}
 //Creo esta función para la revisión de cada sección llenada
 //llamo el value de cada variable
 function checkInputs() {
