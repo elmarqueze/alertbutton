@@ -5,7 +5,9 @@ const email = document.getElementById('email');
 const contact = document.querySelector('.contact');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-const summit = document.getElementById('summit')
+const enviar = document.getElementById('enviar');	
+
+
 
 //Con este evento hago la validación de mi formulario 
 form.addEventListener('submit', e => {
@@ -13,6 +15,48 @@ form.addEventListener('submit', e => {
 	checkInputs();
 });
 
+//con este evento envío alertas de error o validación si está todo ok utilizando SweetAlert.
+enviar.addEventListener('click', ()=> {
+
+	const usuarioValue = usuario.value.trim();
+	const emailValue = email.value.trim();
+	const contactValue = contact.value.trim();
+	const passwordValue = password.value.trim();
+	const password2Value = password2.value.trim();
+
+
+	if(usuarioValue === '' || emailValue === '' || contactValue === '' || passwordValue === '' || password2Value === '') {
+		
+		swal({
+			title: "¡Aún no te has registrado!",
+			text: "Llena todos los campos y sé parte de la comunidad",
+			icon: "error",
+		});
+		
+		setErrorFor(usuario, 'No puedes crear tu cuenta motero');
+	
+	} else if(passwordValue.length < 6){
+		if(passwordValue === '') {
+			setErrorFor(password, 'Necesitas 6 caracteres mínimo.');
+		}
+	} else {
+
+		swal({
+			title: `Bienvenido ${usuarioValue}`,
+			text: 'Ya eres parte de la comunidad motera',
+			icon: "success",
+			button: "Rutear",
+		}).then((result)=> {
+			if(result.isConfirmed) {
+				window.location.href = '/pages/main.html';
+			}
+		});
+
+		
+		setSuccessFor(usuario);
+	}
+	
+});
 
 
 //Creo esta función para la revisión de cada sección llenada
@@ -44,6 +88,8 @@ function checkInputs() {
     //informo al usuario queno puede dejar vacío sus contactos de urgencia
     if(contactValue === '') {
 		setErrorFor(contact, 'No puedes dejar los espacio en blanco');
+	} else if(contactValue < 0 || contactValue > 3){
+		setErrorFor(contact, 'Solo puedes tener 3 contactos de emergencia')
 	} else {
 		setSuccessFor(contact);
 	}
@@ -51,6 +97,10 @@ function checkInputs() {
     //la contraseña es libre a demanda, pueden colocar lo que quieran pero no puede estar vacía
 	if(passwordValue === '') {
 		setErrorFor(password, 'Coloca una contraseña.');
+	
+	} else if(passwordValue.length < 6) {
+			setErrorFor(password, 'Mínimo 6 caracteres.');
+
 	} else {
 		setSuccessFor(password);
 	}

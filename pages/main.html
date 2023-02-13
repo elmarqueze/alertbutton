@@ -11,7 +11,10 @@
 <body>
 
 <section class="main">
+    
+
     <div class="container">
+        
         <form id="frmRegPersona" class="form">
             <div class="input-container form-control form-text">
                 <label for="txtTeléfono">Teléfono </label>
@@ -46,15 +49,27 @@
 
 
             </tbody>
-        </table>     
+        </table> 
+
+        <div class="delete">
+            <button class="delete-button" id="delete-LS">Borrar Contactos</button>
+        </div>
+
+        <div class="alert">
+            <button class="alert-button" id="enviarAlerta">¡ENVIA ALERTA!</button>
+            <button class="alert-button" id="music">Escucha música</button>
+        </div>
+
+        
     </div>
 
 </section>
     
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="../js/logicaRegistro.js"></script>
 <script src="../js/logicaInterfaz.js"></script>
-
+<script src="../js/botonAlert.js"></script>
+<script src="../js/botonMusica.js"></script>
 
 
 
